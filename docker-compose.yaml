@@ -1,0 +1,9 @@
+version: '3'
+services:
+  demo-app:
+  build: .
+  volumes:
+    - .dockervenv:/scr/.venv
+    - .:/scr
+  ports:
+    - 8000:8000
