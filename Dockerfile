@@ -11,7 +11,7 @@ RUN pip install poetry
 COPY pyproject.toml* poetry.lock* ./
 
 
-RUN poetry config virtuallenvs.in-project true
+RUN poetry config virtualenvs.in-project true
 
 RUN if [ -f pyproject.toml ]; then poetry install; fi
 
